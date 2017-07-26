@@ -1,8 +1,8 @@
 # AMQ 7 Clients
 
-AMQ 7 comes with several new clients covering a variety of protocols and programming languages. In the past, any supported clients were only released when we released new versions of the AMQ product. With AMQ7 that has changed; each client has its own lifecycle and is released independently from the AMQ broker/server components. 
+AMQ 7 comes with several new clients covering a variety of protocols and programming languages. In the past, any supported clients were only released when we released new versions of the AMQ product. With AMQ 7 that has changed; each client has its own lifecycle and is released independently from the AMQ broker/server components. 
 
-AMQ7 includes the following supported clients:
+AMQ 7 includes the following supported clients:
 
 * AMQ JMS Client ([official docs](https://access.redhat.com/documentation/en-us/red_hat_jboss_amq/7.0/html/using_the_amq_jms_client/))
 * AMQ C++ Client ([official docs](https://access.redhat.com/documentation/en-us/red_hat_jboss_amq/7.0/html/using_the_amq_cpp_client/))
@@ -101,7 +101,7 @@ To run this example, we'll first download all of the project's dependencies:
 
     $ mvn clean package dependency:copy-dependencies -DincludeScope=runtime -DskipTests
     
-Next, we need to make sure our broker is running. If you've followed from the previous labs, you have a broker running with a single `Acceptor` running on port `61616`. Let's change our `jndi.properties` file to reflect this change. (if you're coming to this lab from your own installation/running instance of the AMQ7 broker, adjust the properties as needed; e.g., if you still have the dedicated AMQP `Acceptor` running, then no need to make this change). 
+Next, we need to make sure our broker is running. If you've followed from the previous labs, you have a broker running with a single `Acceptor` running on port `61616`. Let's change our `jndi.properties` file to reflect this change. (if you're coming to this lab from your own installation/running instance of the AMQ 7 broker, adjust the properties as needed; e.g., if you still have the dedicated AMQP `Acceptor` running, then no need to make this change). 
 
 Our `jndi.properties` file should look like this, with the `connectionfactory.myFactoryLookup` property set to `61616`
 
@@ -143,12 +143,12 @@ We can also use the failover URI (discussed in future lab) like this:
 
 > failover:(amqp://host1:port[,amqp://host2:port...])[?option=value[&option2=value...]]
 
-Options for configuration can be [found at the AMQ7 JMS Client product documentation](https://access.redhat.com/documentation/en-us/red_hat_jboss_amq/7.0/html/using_the_amq_jms_client/configuration#connection_uri_options_jms)
+Options for configuration can be [found at the AMQ 7 JMS Client product documentation](https://access.redhat.com/documentation/en-us/red_hat_jboss_amq/7.0/html/using_the_amq_jms_client/configuration#connection_uri_options_jms)
 
 
 ## AMQ NodeJS Client
 
-The AMQ NodeJS client can be used to connect to the AMQ7 broker (or any compatible AMQP 1.0 broker) and can send and receive messages regardless of what clients produced them (ie, they could be MQTT IoT producers for example). 
+The AMQ NodeJS client can be used to connect to the AMQ 7 broker (or any compatible AMQP 1.0 broker) and can send and receive messages regardless of what clients produced them (ie, they could be MQTT IoT producers for example). 
 
 To use the AMQ NodeJS client, navigate to [https://developers.redhat.com/products/amq/download/](https://developers.redhat.com/products/amq/download/) and locate the AMQ NodeJS (called "JavaScript" in the download portal) Client.
 

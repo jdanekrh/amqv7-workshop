@@ -1,4 +1,4 @@
-# Clustering AMQ7 brokers
+# Clustering AMQ 7 brokers
 
 AMQ 7 has the ability intelligently store & forward messages around a cluster of brokers in order to load-balance and prevent "starvation". In addition to that, however, a clustered setup is required in order to do any type of master/slave (whether shared store, or replicated).
 

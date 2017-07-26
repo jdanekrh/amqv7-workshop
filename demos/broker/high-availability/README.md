@@ -1,8 +1,8 @@
 ## High Availability of Brokers in AMQ 7 Broker (HA)    
 
-This worksheet covers HA AMQ7 Brokers. By the end of this you should know:
+This worksheet covers HA AMQ 7 Brokers. By the end of this you should know:
 
-1. Shared Store HA concepts of AMQ7
+1. Shared Store HA concepts of AMQ 7
    * Live/Backup pairs
    * Shared Store HA
    * Non Shared Store HA (replication)

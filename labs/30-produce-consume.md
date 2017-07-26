@@ -1,6 +1,6 @@
 # Producing and Consuming
 
-AMQ7 has many features. We are going to work through a couple of those features, but at the end of this lab you should feel comfortable with some of the basics. We'll leave suggestions at the end for where to learn more about the other features not covered in this lab.
+AMQ 7 has many features. We are going to work through a couple of those features, but at the end of this lab you should feel comfortable with some of the basics. We'll leave suggestions at the end for where to learn more about the other features not covered in this lab.
 
 ## Use cases:
 
@@ -33,7 +33,7 @@ $ ./bin/artemis help producer
 ```
     
     
-This should show a help guide for how to use a simple producer to send messages to the AMQ7 broker.
+This should show a help guide for how to use a simple producer to send messages to the AMQ 7 broker.
 
 Let's try sending messages:
 
@@ -113,9 +113,9 @@ And we should see our queue is now empty:
 
 ###  Request Reply
 
-Messaging is typically used to decouple producers and consumers in two main dimensions: time, and space. When will a consumer see messages? Who knows, but it's not the producer's responsibility. Where do the consumers even live? Again, not a detail a producer should be coupled to. However, there are use cases where producing messages/events will necessitate a response from *some* consumer downstream. You may already have usecases implemented like this using some legacy proprietary queuing system and would like a nice replacement for that legacy system but cannot change your application. However you come across a request-reply usecase here's what it looks like with JBoss AMQ7. 
+Messaging is typically used to decouple producers and consumers in two main dimensions: time, and space. When will a consumer see messages? Who knows, but it's not the producer's responsibility. Where do the consumers even live? Again, not a detail a producer should be coupled to. However, there are use cases where producing messages/events will necessitate a response from *some* consumer downstream. You may already have usecases implemented like this using some legacy proprietary queuing system and would like a nice replacement for that legacy system but cannot change your application. However you come across a request-reply usecase here's what it looks like with JBoss AMQ 7. 
 
-In the root of the AMQ7 broker installation, there is an `examples` folder. There are a handful of nice examples here. Navigate to:
+In the root of the AMQ 7 broker installation, there is an `examples` folder. There are a handful of nice examples here. Navigate to:
 
 ```bash
 $ cd $AMQ7_BASE/examples/features/standard/request-reply
@@ -217,7 +217,7 @@ On the consumer side, we should consume the message like normal (either using a 
 
 ### Dead Letter Queue
 
-What happens when a consumer cannot process a message? Or what happens when a transaction is rolled back? A JMS message in the AMQ7 broker will be redelivered (and possibly to other consumers) if a consumer is having trouble with it. The problem is, we cannot just redeliver for ever because it will starve other consumers and messages it that come later in the queue. To deal with this, we can send the non-consumable message to the "dead letter queue". 
+What happens when a consumer cannot process a message? Or what happens when a transaction is rolled back? A JMS message in the AMQ 7 broker will be redelivered (and possibly to other consumers) if a consumer is having trouble with it. The problem is, we cannot just redeliver for ever because it will starve other consumers and messages it that come later in the queue. To deal with this, we can send the non-consumable message to the "dead letter queue". 
 
 First, we'll need to configure the broker for dead-letter queue (DLQ) behavior. Let's open our `myfirstbroker` configuration file in `etc/broker.xml` and navigate to the `address-settings` location. We should see an entry similar to this:
 
@@ -270,7 +270,7 @@ Now save your `broker.xml` file. If you had your broker running while you made t
 15:26:47,352 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying queue ExpiryQueue
 ```
 
-Now, let's go to the `dead-letter` example from the examples that ship with the AMQ7 broker:
+Now, let's go to the `dead-letter` example from the examples that ship with the AMQ 7 broker:
 
 ```bash
 $ cd $AMQ7_BASE/examples/features/standard/dead-letter
@@ -330,7 +330,7 @@ We will also add a new `Anycast` address and bind it to a queue named `exampleQu
 ```
 
 
-Now, let's go to the `last-value-queue` example from the examples that ship with the AMQ7 broker:
+Now, let's go to the `last-value-queue` example from the examples that ship with the AMQ 7 broker:
 
 ```bash
 $ cd $AMQ7_BASE/examples/features/standard/last-value-queue

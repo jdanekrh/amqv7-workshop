@@ -1,6 +1,6 @@
-# Installing and Configuring AMQ7 Interconnect Router
+# Installing and Configuring AMQ 7 Interconnect Router
 
-The AMQ7 Interconnect Router components are written in native code (C++) and are supported on RHEL. In this lab, we'll take a look at two ways to bootstrap Interconnect Router for the purposes of demonstrating routing and broker to router connectivity. If you're looking to do an installation of Interconnect Router on your machines (ie, not just for following this lab), then the official documentation is quite good. [Check it out at access.redhat.com](https://access.redhat.com/documentation/en-us/red_hat_jboss_amq/7.0/html/using_amq_interconnect/installation) for doing a proper installation.
+The AMQ 7 Interconnect Router components are written in native code (C++) and are supported on RHEL. In this lab, we'll take a look at two ways to bootstrap Interconnect Router for the purposes of demonstrating routing and broker to router connectivity. If you're looking to do an installation of Interconnect Router on your machines (ie, not just for following this lab), then the official documentation is quite good. [Check it out at access.redhat.com](https://access.redhat.com/documentation/en-us/red_hat_jboss_amq/7.0/html/using_amq_interconnect/installation) for doing a proper installation.
 
 
 ### Option 1 Install into a fresh copy of RHEL 7
@@ -42,7 +42,7 @@ sudo rpm -Uvh qpid-dispatch-router-0.8.0-9.el7.x86_64.rpm
 
 With option 2, you can choose to use Docker and grab docker images. Note you'll need some kind of Linux machine (or VM) if your Host machine isn't Linux. This could be Docker for Mac/Windows, Minikube, or the Red Hat CDK 3.0. In any event, setting up Linux for Docker usage is beyond the scope of this installation documentation. Also, when doing any kind of port forwarding between the docker guest VM and your local workstation host, it's up to you to figure out how to open up the ports if you're trying to communicate locally with it. 
  
-To get the docker image that contains the AMQ7 Interconnect Router: 
+To get the docker image that contains the AMQ 7 Interconnect Router: 
 
 ```bash
 docker pull ceposta/qdr:latest

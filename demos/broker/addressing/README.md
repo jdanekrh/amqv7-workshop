@@ -115,13 +115,13 @@ example, try sending messages to topic.foo and topic.bar:
 ```
 
 #### Outbound Routing
-Before we move on, it's useful to take note of one more component of the AMQ7 Core API - the server consumer.
+Before we move on, it's useful to take note of one more component of the AMQ 7 Core API - the server consumer.
 
 The server consumer is another Core API concept.  The server consumer receives messages from a single queue within the broker. The broker takes care of distributing messages from queues to server consumers.  they are created by protocol managers and receive messages from queues.  When a message is received by a server consumer, it notifies the protocol manager. A couple of things to note:
     * One queue may have more that one server consumer.
-    * The AMQ7 broker takes care of distributing messages from queues to server consumers.
+    * The AMQ 7 broker takes care of distributing messages from queues to server consumers.
     
-For the sake of this tutorial we'll call the routing of messages from queues to consumers **outbound** routing.  We'll take a look later at how these internal consumers play a role within the overall AMQ7 broker picture.
+For the sake of this tutorial we'll call the routing of messages from queues to consumers **outbound** routing.  We'll take a look later at how these internal consumers play a role within the overall AMQ 7 broker picture.
 
 ## Addressing Wildcard Syntax
 AMQ 7 offers a wildcard syntax.  Wildcards can be used in address names and are used to match received messages.  
@@ -187,13 +187,13 @@ Navigate back to the HawtIO console and view the queue.  You will notice that th
 #### What's happening under the covers
 Pretty basic stuff, but it's good to know what has happened under the covers.
 
-The example application created a JMS queue consumer.  The JMS AMQP (qpid JMS) client takes care of interacting the the AMQ7 broker 
+The example application created a JMS queue consumer.  The JMS AMQP (qpid JMS) client takes care of interacting the the AMQ 7 broker 
 to set up the relevant addresses, queues, routing types and server consumers.  
 
 How does it do this?
 
 1. The JMS AMQP client library sends an AMQP packet (ATTACH) to the broker.  This is essentially the AMQP way of sending request to create a queue subscriber.  This packet has a bunch of information including the link name, durability, source and target address and some additional information (terminus capabilities) that defines the type of endpoint the user has requested (i.e. Queue).  
-2. The AMQP protocol manager handles the packet0 and inteprets the ATTACH information, attempting to satisfy the AMQP request by interacting with the AMQ7 broker Core API.  The steps that take to achieve this are as follows:
+2. The AMQP protocol manager handles the packet0 and interprets the ATTACH information, attempting to satisfy the AMQP request by interacting with the AMQ 7 broker Core API.  The steps that take to achieve this are as follows:
     1. Protocol manager inspects the ATTACH packet to determine whether a sender or receiver link should be created.
     2. Protocol manager uses the source address on the packet and interacts with the Core API to query for an address that matches.
     3. The broker checks to see if there are any terminus capabilities set on the ATTACH packet (the AMQP way of requesting certain features of the endpoint), in this case, QUEUE is present.  

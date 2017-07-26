@@ -1,8 +1,8 @@
 # Configuring AMQ 7
 
-In this lab, we'll take a look at the AMQ7 configuration files and some basic configuration options and things to be aware of. We'll dig into more specific configurations (like persistence, clustering, etc) in later labs.
+In this lab, we'll take a look at the AMQ 7 configuration files and some basic configuration options and things to be aware of. We'll dig into more specific configurations (like persistence, clustering, etc) in later labs.
 
-If we navigate back to our `brokers/myfirstbroker` installation that we created in the previous lab we can examine our configuration. AMQ7 configuration is stored in `etc/` folder. If we do a listing of the `etc/` folder we should see something similar to the following:
+If we navigate back to our `brokers/myfirstbroker` installation that we created in the previous lab we can examine our configuration. AMQ 7 configuration is stored in `etc/` folder. If we do a listing of the `etc/` folder we should see something similar to the following:
 
     $ cd brokers/myfirstbroker
     $ ls -l ./etc/
@@ -28,7 +28,7 @@ If you'd like more information on the rest of the files, [see the product docume
 
 ### bootstrap.xml
 
-The `bootstrap.xml` file is fairly straight forward and contains a small set of configurations for starting a broker. The most important configuration here is the `<server configuration=""/>` element. This configuration setting allows us to instruct the bootstrap runtime where the main configuration file is. We may opt to keep these configuration settings in a version controlled repository that gets installed into the server where the AMQ7 broker runs independently of how/when the broker gets created. Alternatively, if we choose to run our broker in a container environment, we may want to mount in the config files independently of the broker/container. The default setting is:
+The `bootstrap.xml` file is fairly straight forward and contains a small set of configurations for starting a broker. The most important configuration here is the `<server configuration=""/>` element. This configuration setting allows us to instruct the bootstrap runtime where the main configuration file is. We may opt to keep these configuration settings in a version controlled repository that gets installed into the server where the AMQ 7 broker runs independently of how/when the broker gets created. Alternatively, if we choose to run our broker in a container environment, we may want to mount in the config files independently of the broker/container. The default setting is:
 
     <server configuration="${artemis.URI.instance}/etc/broker.xml"/>
 
@@ -61,7 +61,7 @@ In the persistence section, we can configure whether we will use persistence (tr
 
 #### Security
 
-AMQ7 has fine grained Role Based Access Control for specifying what users can do when they connect and interact with addresses in the messaging system.  Using the Security section of the `broker.xml` configuration file, we can assign roles to specific permissions such as `createDurableQueues` or `browse`, `send`, or `consume`, etc.
+AMQ 7 has fine grained Role Based Access Control for specifying what users can do when they connect and interact with addresses in the messaging system.  Using the Security section of the `broker.xml` configuration file, we can assign roles to specific permissions such as `createDurableQueues` or `browse`, `send`, or `consume`, etc.
 
 #### Acceptors
 
@@ -93,7 +93,7 @@ For example, to connect as an AMQP client, you'd configure your client to connec
 
 #### Addresses
 
-Lastly, the `<addresses/>` and `<address-settings/>` section of the configuration define more granular properties for sets of destinations defined as *addresses*. In AMQ7, an *address* is an abstraction of any physical destination (actually, it can be many destinations). An *address* has a name, 0 or more destinations, and a routing type, of which that can be:
+Lastly, the `<addresses/>` and `<address-settings/>` section of the configuration define more granular properties for sets of destinations defined as *addresses*. In AMQ 7, an *address* is an abstraction of any physical destination (actually, it can be many destinations). An *address* has a name, 0 or more destinations, and a routing type, of which that can be:
 
 
 | Routing Type  | Description   |
@@ -101,7 +101,7 @@ Lastly, the `<addresses/>` and `<address-settings/>` section of the configuratio
 | Anycast   |  Deliver messages in a point-to-point manner |
 | Multicast  |  Deliver messages to all consumers in a group |
 
-We can associate an address with 0 or more physical queues. By default, AMQ7 configuration has the following addresses configured:
+We can associate an address with 0 or more physical queues. By default, AMQ 7 configuration has the following addresses configured:
 
 ```
       <addresses>

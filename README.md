@@ -78,7 +78,7 @@ Trello Project Tracking Link —> https://trello.com/b/NOUVUMcF/a-mq7-delivery-w
 * [Usecase 03] Healthcare Institution Topology
 * [Usecase 04] Call Center Topology
 * [Usecase 05] Transportation Ticketing Service Topology
-* [Usecase 06] Online Retail Service Toplology
+* [Usecase 06] Online Retail Service Topology
 
 ## Contributing
 

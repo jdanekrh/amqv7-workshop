@@ -29,7 +29,7 @@ Download the latest version of the Broker from https://developers.redhat.com/pro
 Follow the install instructions at https://developers.redhat.com/products/amq/hello-world and create and run an AMQ 7 Broker
 instance.
 
-Goto http://localhost:8161/hawtio/login and log in using the default user/pass you created when the AMQ7 instance was created.
+Goto http://localhost:8161/hawtio/login and log in using the default user/pass you created when the AMQ 7 instance was created.
 
 ### Using a Queue
 

@@ -1,6 +1,6 @@
-# Connecting the Interconnect Router to an AMQ7 Broker
+# Connecting the Interconnect Router to an AMQ 7 Broker
 
-In this lab we'll take a look at configuring the Interconnect Router to route messages to and from an AMQ7 broker. Clients can talk directly to the router and think they're talking to a broker.
+In this lab we'll take a look at configuring the Interconnect Router to route messages to and from an AMQ 7 broker. Clients can talk directly to the router and think they're talking to a broker.
 
 In this lab, we'll use the Docker images from the [installing interconnect router](./80-install-qdr.md) lab. You can use the same configuration files that we'll use here in your full version of RHEL/CentOS if you've installed Interconnect Router there. The broker we'll use comes from the earlier labs; it will be running locally on your laptop. Remember, you'll need to configure port forwarding between your docker guest VM and your developer host machine.
 
@@ -55,7 +55,7 @@ connector {
 
 ```
 
-In this configuration, we're setting up a `listener` which listens for incoming connections to the router; for example, an AMQP client could connect directly to this listener (in this case, we're listening on port `5672` which is the default AMQP port). Also locate the `connector` section of the configuration. This describes how we'll connect to the AMQ7 broker. You'll want to change the host/port config to match that of your broker. For example, if you're running the broker on your local machine and the router in a docker container locally on a guest OS, you'd want to use your host IP for the broker's `connector.host` field.
+In this configuration, we're setting up a `listener` which listens for incoming connections to the router; for example, an AMQP client could connect directly to this listener (in this case, we're listening on port `5672` which is the default AMQP port). Also locate the `connector` section of the configuration. This describes how we'll connect to the AMQ 7 broker. You'll want to change the host/port config to match that of your broker. For example, if you're running the broker on your local machine and the router in a docker container locally on a guest OS, you'd want to use your host IP for the broker's `connector.host` field.
 
 Let's make sure our broker from Lab 1, `myfirstbroker` is up and running:
 

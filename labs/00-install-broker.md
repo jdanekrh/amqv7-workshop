@@ -1,23 +1,23 @@
-# Installing the AMQ7 Broker
+# Installing the AMQ 7 Broker
 
 To begin, verify you have [all of the prerequisites](README.md) for these labs. 
 
-As a reminder, JBoss AMQ7 comes with four main components:
+As a reminder, JBoss AMQ 7 comes with four main components:
 
-* AMQ7 Broker
-* AMQ7 Interconnect Router
-* AMQ7 Clients
+* AMQ 7 Broker
+* AMQ 7 Interconnect Router
+* AMQ 7 Clients
 * Management Console
 
 The Broker comes with the management console, but the Interconnect Router and each individual client comes as a separate binary/download/installation. 
 
 We'll start by downloading the binaries for JBoss AMQ 7 Broker. In later labs, we'll get to the [clients](20-clients.md) as well as the [interconnect router](80-install-qdr.md)
 
-All of the components are available at the [Downloads page](https://developers.redhat.com/products/amq/download/) of [https://developers.redhat.com/products/amq/overview/](https://developers.redhat.com/products/amq/overview/). Navigate to that page and download the AMQ7 Broker:
+All of the components are available at the [Downloads page](https://developers.redhat.com/products/amq/download/) of [https://developers.redhat.com/products/amq/overview/](https://developers.redhat.com/products/amq/overview/). Navigate to that page and download the AMQ 7 Broker:
 
-![Download AMQ7 Broker](images/install/downloadbroker.png)
+![Download AMQ 7 Broker](images/install/downloadbroker.png)
 
-Alternatively, if you are a current Red Hat customer, you can download the latest AMQ7 (and any associated patches) from the [Red Hat Customer Portal](https://access.redhat.com/products/red-hat-jboss-amq/). Even if you don't currently have JBoss AMQ subscriptions, you still have access to all of the Red Hat products and documentation for development/evaluation purposes. 
+Alternatively, if you are a current Red Hat customer, you can download the latest AMQ 7 (and any associated patches) from the [Red Hat Customer Portal](https://access.redhat.com/products/red-hat-jboss-amq/). Even if you don't currently have JBoss AMQ subscriptions, you still have access to all of the Red Hat products and documentation for development/evaluation purposes. 
 
 Once you click one of the download links and you have the broker downloaded, navigate to your command line (Powershell, Bash, Cygwin, etc) and locate the newly downloaded file (e.g. `jboss-amq-7.0.0.redhat-1-bin.zip`). You can move this .zip file to a location of your choosing (e.g. ~/dev/labs or similar). 
 
@@ -48,8 +48,8 @@ Let's have a look at each folder:
 
 * `bin` -- Set up scripts for creating and managing brokers
 * `etc` -- Bootstrap settings for running `artemis` commands
-* `examples` -- handful of useful examples for getting started with AMQ7
-* `lib` -- where the AMQ7 libs and dependencies are packaged
+* `examples` -- handful of useful examples for getting started with AMQ 7
+* `lib` -- where the AMQ 7 libs and dependencies are packaged
 * `schema` -- config files schemas
 * `web` -- where the main web console configuration and libraries are stored
 
@@ -57,7 +57,7 @@ Let's have a look at each folder:
 
 Up until this point, we've just download the main binaries and bootstrap configuration, but we still don't have a broker. 
 
-> Note this is a bit different from AMQ6 if you've used that in the past. In AMQ6, the initial binary download was the broker itself. With AMQ7, we need to explicitly create a broker with the settings that we prefer.
+> Note this is a bit different from AMQ6 if you've used that in the past. In AMQ6, the initial binary download was the broker itself. With AMQ 7, we need to explicitly create a broker with the settings that we prefer.
 
 Let's create a new folder in a location we choose (could be inside the installation folder if we'd like) called `brokers` and let's create a new broker inside of it:
 
@@ -93,7 +93,7 @@ Or you can run the broker in the background using:
    "/Users/ceposta/dev/activemq/jboss-amq-7.0.0.redhat-1/brokers/myfirstbroker/bin/artemis-service" start
 ```    
 
-Congrats! You've just created your *first* AMQ7 broker :)
+Congrats! You've just created your *first* AMQ 7 broker :)
 
 Note that some auto-tuning was done based on your environment. This is pretty handy when it comes to selecting the appropriate configuration for your persistent messaging use cases, but we'll come back to that in a subsequent lab.  
 

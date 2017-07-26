@@ -1,6 +1,6 @@
 ## Large Messages in AMQ 7 Broker   
 
-This worksheet covers handling large messages in the AMQ7 Broker. By the end of this you should know:
+This worksheet covers handling large messages in the AMQ 7 Broker. By the end of this you should know:
 
 1. The large message concepts of AMQ 7
    * Memory limits in the broker

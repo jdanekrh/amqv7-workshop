@@ -1,6 +1,6 @@
 # AMQ 7 Message Persistence & Replication
 
-AMQ7 has various message persistence options:
+AMQ 7 has various message persistence options:
 
 * NIO (Java NIO, journal-based persistence)
 * ASYNCIO (Linux Asynchronous IO, journal-based persistence)

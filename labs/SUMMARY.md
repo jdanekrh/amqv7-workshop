@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Installing the AMQ7 Broker](00-install-broker.md) 
+* [Installing the AMQ 7 Broker](00-install-broker.md) 
 * [Configuring AMQ 7](10-configure-broker.md)  
 * [AMQ 7 Clients](20-clients.md)
 * [Producing and Consuming](30-produce-consume.md)  
