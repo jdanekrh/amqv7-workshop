@@ -1,6 +1,6 @@
 # Master/Slave - Shared Store
 
-A-MQ 7 has the ability to run in a master/slave (ie, active/passive) configuration so that if an active node goes down, another can immediately take its place and continue serving clients and processing messages. There are a few different options that can be used to achieve this:
+AMQ 7 has the ability to run in a master/slave (ie, active/passive) configuration so that if an active node goes down, another can immediately take its place and continue serving clients and processing messages. There are a few different options that can be used to achieve this:
 
 * Shared store
 * Replicated store (ie, "shared nothing")
@@ -10,7 +10,7 @@ For the purpose of this lab, we will focus on the "Shared store" option for pers
 
 ## Prerequisites
 
-Download and install the A-MQ 7 broker package as described in [Lab 1](00-install-broker.md).
+Download and install the AMQ 7 broker package as described in [Lab 1](00-install-broker.md).
 
 ## Creating the brokers
 

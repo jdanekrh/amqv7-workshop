@@ -1,1 +1,1 @@
-# JBoss A-MQ 7 Healthcare Institution Usecase
+# JBoss AMQ 7 Healthcare Institution Usecase

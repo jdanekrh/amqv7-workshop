@@ -1,6 +1,6 @@
 # Clustering AMQ7 brokers
 
-A-MQ 7 has the ability intelligently store & forward messages around a cluster of brokers in order to load-balance and prevent "starvation". In addition to that, however, a clustered setup is required in order to do any type of master/slave (whether shared store, or replicated).
+AMQ 7 has the ability intelligently store & forward messages around a cluster of brokers in order to load-balance and prevent "starvation". In addition to that, however, a clustered setup is required in order to do any type of master/slave (whether shared store, or replicated).
 
 There are a few different options for configuring a clustered setup:
 
@@ -12,7 +12,7 @@ For the purposes of this lab, we will use the static option. You can refer to th
 
 ## Prerequisites
 
-Download and install the A-MQ 7 broker package as described in [Lab 1](00-install-broker.md).
+Download and install the AMQ 7 broker package as described in [Lab 1](00-install-broker.md).
 
 ## Creating the brokers
 

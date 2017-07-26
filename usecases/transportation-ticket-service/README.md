@@ -1,1 +1,1 @@
-# JBoss A-MQ 7 Transportation Ticket Service Usecase
+# JBoss AMQ 7 Transportation Ticket Service Usecase

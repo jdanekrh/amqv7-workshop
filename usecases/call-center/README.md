@@ -1,1 +1,1 @@
-# JBoss A-MQ 7 Call Center Service Usecase
+# JBoss AMQ 7 Call Center Service Usecase

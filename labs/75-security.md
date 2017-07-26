@@ -27,7 +27,7 @@ With the additional 7 permissions, we have finer grain control over assigning ro
 
 ### Permissions / Roles Lab 1
 
-This lab demonstrates how to setup a read-only user on A-MQ i.e. the user can only consumer from a given queue.
+This lab demonstrates how to setup a read-only user on AMQ i.e. the user can only consumer from a given queue.
 
 1. Create a new broker by executing the following command:
 

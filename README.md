@@ -1,4 +1,4 @@
-# JBoss A-MQ 7 Workshop
+# JBoss AMQ 7 Workshop
 
 
 This workshop introduces participants to JBoss AMQ 7 through a presentation and hands-on lab format. The workshop is intended to be delivered in person, but will provide enough guidance for self-paced consumption.

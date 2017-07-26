@@ -1,1 +1,1 @@
-# JBoss A-MQ 7 Banking Service Usecase
+# JBoss AMQ 7 Banking Service Usecase
